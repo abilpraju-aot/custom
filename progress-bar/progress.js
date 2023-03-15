@@ -14,13 +14,12 @@ export default class progressBar extends ReactComponent {
         return {
             title: 'Progress Bar',
             icon: 'progress',
-            group: 'basic',
+            group: 'Custom',
             documentation: '', //TODO
             weight: 110,
             schema: progressBar.schema()
         };
     }
-
     /**
      * This function is the default settings for the component. At a minimum you want to set the type to the registered
      * type of your component (i.e. when you call Components.setComponent('type', MyComponent) these types should match.
@@ -34,12 +33,10 @@ export default class progressBar extends ReactComponent {
             label: 'Progress Bar',
         });
     }
-
     /*
      * Defines the settingsForm when editing a component in the builder.
      */
     static editForm = settingsForm;
-
     /**
      * This function is called when the DIV has been rendered and added to the DOM. You can now instantiate the react component.
      *
@@ -68,8 +65,6 @@ export default class progressBar extends ReactComponent {
             () => (this.reactInstance = instance)
         );
     }
-
-
     /**
      * Automatically detach any react components.
      *
